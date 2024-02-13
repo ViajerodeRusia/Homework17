@@ -6,7 +6,7 @@ import java.util.List;
 
 @Service
 public interface StoreService {
-    void add(List<Integer> id);
+    void add(String ids);
     List<Integer> get();
 
 }

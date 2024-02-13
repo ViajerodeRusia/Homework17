@@ -25,13 +25,7 @@ public class StoreController {
     }
     @PostMapping("/add")
     public String add(@RequestParam String ids, Model model) {
-        String[] idArray = ids.split(",");
-        List<Integer> idList = new ArrayList<>();
-        for (String id : idArray) {
-            Integer idValue = Integer.parseInt(id);
-            idList.add(idValue);
-        }
-        storeService.add(idList);
+        storeService.add(ids);
         model.addAttribute("ids", storeService.get());
         return "main";
     }
